@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 
 
-migrate = Migrate(app, db)
+
 
 
 # Initialisation de l'application Flask
