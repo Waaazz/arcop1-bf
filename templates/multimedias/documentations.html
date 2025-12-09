@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Documentations - ARCOP{% endblock %}
+
+{% block content %}
+<div class="page-header" style="background: linear-gradient(135deg, #1e5a8e 0%, #0d3a5f 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <div style="font-size: 72px; margin-bottom: 20px;">📚</div>
+        <h1 style="font-size: 42px; margin-bottom: 15px;">Documentations</h1>
+        <p style="font-size: 18px;">Nos publications et ressources</p>
+    </div>
+</div>
+
+<section style="padding: 60px 20px;">
+    <div class="container">
+        {% if documents %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+            {% for doc in documents %}
+            <div style="background: white; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px;">
+                    <div style="font-size: 36px;">📄</div>
+                    <div style="flex: 1;">
+                        <h4 style="color: #1e5a8e; margin-bottom: 8px; font-size: 16px;">{{ doc.titre }}</h4>
+                        {% if doc.description %}
+                        <p style="color: #666; font-size: 13px; line-height: 1.5; margin-bottom: 10px;">{{ doc.description[:100] }}...</p>
+                        {% endif %}
+                        {% if doc.categorie %}
+                        <span style="display: inline-block; padding: 4px 12px; background: #e3f2fd; color: #1e5a8e; border-radius: 15px; font-size: 11px; margin-bottom: 10px;">{{ doc.categorie }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if doc.fichier_url %}
+                <a href="{{ doc.fichier_url }}" class="btn-read-more" style="display: inline-block; padding: 8px 20px; font-size: 13px; text-decoration: none;" target="_blank">Télécharger</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 60px 20px;">
+            <div style="font-size: 72px; margin-bottom: 20px;">📋</div>
+            <p style="color: #666; font-size: 18px;">Aucun document disponible pour le moment.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

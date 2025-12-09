@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}Membres de l'ARCOP{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 20px;">
+    <div class="container">
+        <h1 style="color: white; font-size: 42px; text-align: center; margin-bottom: 20px;">Les membres de l'ARCOP</h1>
+        <p style="color: white; font-size: 18px; text-align: center; max-width: 800px; margin: 0 auto;">
+            Découvrez les organisations et personnes qui composent notre réseau
+        </p>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container">
+        {% if membres %}
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                {% for membre in membres %}
+                <div style="background: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="background: linear-gradient(135deg, #2d862d, #1e5a8e); height: 150px; display: flex; align-items: center; justify-content: center;">
+                        {% if membre.photo_url %}
+                            <img src="{{ membre.photo_url }}" alt="{{ membre.nom }}" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; object-fit: cover;">
+                        {% else %}
+                            <div style="width: 120px; height: 120px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: #2d862d;">
+                                {{ membre.nom[0] }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div style="padding: 25px; text-align: center;">
+                        <h3 style="color: #2d862d; font-size: 20px; margin-bottom: 8px;">{{ membre.nom }}</h3>
+                        <p style="color: #1e5a8e; font-weight: bold; margin-bottom: 8px;">{{ membre.fonction }}</p>
+                        {% if membre.organisation %}
+                            <p style="color: #666; font-size: 14px; margin-bottom: 15px;">{{ membre.organisation }}</p>
+                        {% endif %}
+                        {% if membre.bio %}
+                            <p style="color: #666; font-size: 13px; line-height: 1.6; margin-bottom: 15px;">{{ membre.bio[:150] }}{% if membre.bio|length > 150 %}...{% endif %}</p>
+                        {% endif %}
+                        {% if membre.email or membre.telephone %}
+                            <div style="border-top: 1px solid #ddd; padding-top: 15px; margin-top: 15px;">
+                                {% if membre.email %}
+                                    <p style="font-size: 13px; color: #666; margin-bottom: 5px;">✉️ {{ membre.email }}</p>
+                                {% endif %}
+                                {% if membre.telephone %}
+                                    <p style="font-size: 13px; color: #666;">📞 {{ membre.telephone }}</p>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <!-- Membres par défaut si la base est vide -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #2d862d, #1e5a8e); height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: #2d862d;">
+                            AT
+                        </div>
+                    </div>
+                    <div style="padding: 25px; text-align: center;">
+                        <h3 style="color: #2d862d; font-size: 20px; margin-bottom: 8px;">Dr. Amadou TRAORE</h3>
+                        <p style="color: #1e5a8e; font-weight: bold; margin-bottom: 8px;">Président</p>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">ARCOP</p>
+                        <p style="color: #666; font-size: 13px; line-height: 1.6;">Agronome de formation avec plus de 20 ans d'expérience dans le développement rural et le renforcement des capacités des organisations paysannes.</p>
+                    </div>
+                </div>
+                
+                <div style="background: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #2d862d, #1e5a8e); height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: #2d862d;">
+                            FO
+                        </div>
+                    </div>
+                    <div style="padding: 25px; text-align: center;">
+                        <h3 style="color: #2d862d; font-size: 20px; margin-bottom: 8px;">Mme Fatou OUEDRAOGO</h3>
+                        <p style="color: #1e5a8e; font-weight: bold; margin-bottom: 8px;">Secrétaire Générale</p>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">ARCOP</p>
+                        <p style="color: #666; font-size: 13px; line-height: 1.6;">Spécialiste en développement rural et en gestion de projets agricoles, elle coordonne les activités de l'ARCOP.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                <p style="color: #666; font-size: 16px;">Les informations détaillées sur nos membres seront bientôt disponibles.</p>
+                <p style="color: #666; font-size: 14px; margin-top: 10px;">Pour plus d'informations, <a href="{{ url_for('contact') }}" style="color: #2d862d; font-weight: bold;">contactez-nous</a>.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 32px; margin-bottom: 20px;">Vous souhaitez adhérer à l'ARCOP ?</h2>
+        <p style="font-size: 18px; margin-bottom: 30px;">Rejoignez notre réseau d'organisations paysannes engagées pour le développement rural durable</p>
+        <button class="btn-primary" onclick="window.location='{{ url_for('contact') }}'" style="padding: 15px 40px; font-size: 16px;">Nous Contacter</button>
+    </div>
+</section>
+{% endblock %}

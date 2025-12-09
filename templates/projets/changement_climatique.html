@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Projets Changement Climatique - ARCOP{% endblock %}
+
+{% block content %}
+<div class="page-header" style="background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <div style="font-size: 72px; margin-bottom: 20px;">🌡️</div>
+        <h1 style="font-size: 42px; margin-bottom: 15px;">Projets Changement Climatique</h1>
+        <p style="font-size: 18px;">Nos projets d'adaptation climatique</p>
+    </div>
+</div>
+
+{% include 'projets/_projet_template.html' %}
+{% endblock %}

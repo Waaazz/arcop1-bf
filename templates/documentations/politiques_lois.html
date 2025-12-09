@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Politiques et Lois{% endblock %}
+{% block content %}
+<section class="hero" style="padding: 60px 20px;">
+    <div class="container">
+        <h1 style="color: white; font-size: 42px; text-align: center;">Politiques et Lois Agro Sylvo Pastoral</h1>
+    </div>
+</section>
+<section style="background: white; padding: 60px 20px;">
+    <div class="container">
+        {% if documents %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            {% for doc in documents %}
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; border-left: 4px solid #2d862d;">
+                <h3 style="color: #2d862d; margin-bottom: 10px;">{{ doc.titre }}</h3>
+                <p style="color: #666; font-size: 14px; margin-bottom: 15px;">{{ doc.description }}</p>
+                <p style="color: #999; font-size: 12px;">Type: {{ doc.type_fichier }} • {{ doc.date_publication.strftime('%d/%m/%Y') }}</p>
+                {% if doc.fichier_url %}
+                <button class="btn-read-more" style="margin-top: 15px;">Télécharger</button>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p style="text-align: center; color: #666; padding: 40px;">Aucun document disponible pour le moment.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

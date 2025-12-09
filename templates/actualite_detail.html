@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}{{ actualite.titre }} - ARCOP{% endblock %}
+{% block content %}
+<section class="hero" style="padding: 40px 20px;">
+    <div class="container" style="max-width: 900px;">
+        <a href="{{ url_for('actualite') }}" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 20px;">← Retour aux actualités</a>
+        <h1 style="color: white; font-size: 38px; margin-bottom: 15px;">{{ actualite.titre }}</h1>
+        <p style="color: rgba(255,255,255,0.9); font-size: 14px;">📅 Publié le {{ actualite.date_publication.strftime('%d %B %Y') }}</p>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container" style="max-width: 900px;">
+        {% if actualite.image_url %}
+        <img src="{{ actualite.image_url }}" alt="{{ actualite.titre }}" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 12px; margin-bottom: 30px;">
+        {% endif %}
+        
+        <div style="font-size: 18px; line-height: 1.8; color: #666;">
+            {{ actualite.contenu|safe }}
+        </div>
+        
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #f0f0f0;">
+            <a href="{{ url_for('actualite') }}" class="btn-primary" style="display: inline-block; text-decoration: none;">← Voir toutes les actualités</a>
+        </div>
+    </div>
+</section>
+
+<section style="background: #f8f9fa; padding: 60px 20px;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #2d862d; text-align: center; margin-bottom: 30px;">Partagez cette actualité</h2>
+        <div style="text-align: center;">
+            <button class="btn-secondary" style="margin: 0 10px;">Partager sur Facebook</button>
+            <button class="btn-secondary" style="margin: 0 10px;">Partager sur Twitter</button>
+            <button class="btn-secondary" style="margin: 0 10px;">Partager par Email</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

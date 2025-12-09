@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Le mot du Président - ARCOP{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 20px;">
+    <div class="container">
+        <h1 style="color: white; font-size: 42px; text-align: center; margin-bottom: 20px;">Le mot du Président</h1>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container" style="max-width: 1000px;">
+        <div style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start;">
+            <div style="text-align: center;">
+                <div style="width: 250px; height: 250px; border-radius: 50%; background: linear-gradient(135deg, #2d862d, #1e5a8e); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <div style="width: 220px; height: 220px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 80px; font-weight: bold; color: #2d862d;">
+                        P
+                    </div>
+                </div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 5px;">Dr. Amadou TRAORE</h3>
+                <p style="color: #1e5a8e; font-weight: bold;">Président de l'ARCOP</p>
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 40px; border-radius: 12px; border-left: 5px solid #2d862d;">
+                <p style="font-size: 20px; font-style: italic; color: #666; line-height: 1.8; margin-bottom: 30px;">
+                    "Ensemble, bâtissons une agriculture durable et prospère pour le Burkina Faso"
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                    Chers membres, chers partenaires, chers amis de l'ARCOP,
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                    C'est avec un grand honneur et un profond sens des responsabilités que je m'adresse à vous en tant que Président de l'Association pour le Renforcement des Compétences des Organisations Paysannes (ARCOP).
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                    Dans un contexte où l'agriculture burkinabè fait face à de multiples défis - changements climatiques, dégradation des sols, insécurité alimentaire - l'ARCOP s'est donnée pour mission de renforcer les capacités de nos organisations paysannes afin qu'elles deviennent des acteurs incontournables du développement rural.
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                    Notre vision est claire : des organisations paysannes fortes, autonomes et capables de porter la voix de millions de producteurs agricoles. Pour y parvenir, nous nous engageons à :
+                </p>
+                
+                <ul style="font-size: 16px; color: #666; line-height: 2; margin-bottom: 20px; margin-left: 30px;">
+                    <li>Promouvoir l'agroécologie comme modèle de développement durable</li>
+                    <li>Renforcer les capacités techniques et organisationnelles de nos membres</li>
+                    <li>Faciliter l'accès aux financements et aux marchés</li>
+                    <li>Porter un plaidoyer fort pour des politiques agricoles favorables</li>
+                    <li>Capitaliser et diffuser les bonnes pratiques</li>
+                </ul>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+                    Nos réalisations témoignent de notre engagement : plus de 50 organisations membres, des milliers de producteurs formés, des dizaines de projets mis en œuvre avec succès. Mais le chemin est encore long, et c'est ensemble, avec votre soutien et votre engagement, que nous relèverons les défis de demain.
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 30px;">
+                    Je vous invite à nous rejoindre dans cette belle aventure collective pour un Burkina Faso où l'agriculture est prospère, durable et bénéfique à tous.
+                </p>
+                
+                <p style="font-size: 16px; color: #666; line-height: 1.8; font-weight: bold;">
+                    Dr. Amadou TRAORE<br>
+                    Président de l'ARCOP
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 32px; margin-bottom: 20px;">Rejoignez le mouvement</h2>
+        <p style="font-size: 18px; margin-bottom: 30px;">Ensemble, construisons l'agriculture de demain</p>
+        <button class="btn-primary" onclick="window.location='{{ url_for('contact') }}'" style="padding: 15px 40px; font-size: 16px;">Nous Contacter</button>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Offres d'emplois - ARCOP{% endblock %}
+
+{% block content %}
+<div class="page-header" style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h1 style="font-size: 42px; margin-bottom: 15px;">Offres d'Emplois</h1>
+        <p style="font-size: 18px;">Rejoignez notre équipe</p>
+    </div>
+</div>
+
+<section style="padding: 60px 20px;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <p style="color: #666; font-size: 18px; line-height: 1.8;">
+                L'ARCOP recrute régulièrement des profils variés pour renforcer son équipe. 
+                Consultez régulièrement cette page pour découvrir nos opportunités.
+            </p>
+        </div>
+
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 40px; text-align: center;">
+            <div style="font-size: 72px; margin-bottom: 20px;">📋</div>
+            <h3 style="color: #2d862d; margin-bottom: 15px;">Aucune offre disponible actuellement</h3>
+            <p style="color: #666; margin-bottom: 25px;">
+                Aucun poste n'est ouvert pour le moment. N'hésitez pas à nous envoyer une candidature spontanée ou à revenir consulter cette page régulièrement.
+            </p>
+            <a href="{{ url_for('contact') }}" class="btn-read-more" style="display: inline-block; padding: 12px 35px; text-decoration: none;">Candidature spontanée</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

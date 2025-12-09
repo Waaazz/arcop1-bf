@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ARCOP - Association pour le Renforcement des Compétences des Organisations Paysannes{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+  </head>
+
+
+  <body>
+
+    <header>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo_arcop1.png') }}" alt="Logo ARCOP">            
+        <div class="logo-text">
+            <h1>ARCOP</h1>
+            <p>ASSOCIATION POUR LE RENFORCEMENT DES COMPÉTENCES DES ORGANISATIONS PAYSANNES</p>
+        </div>
+    </div>
+
+    
+   
+    <nav>
+       
+        <!-- 🏠 Accueil -->
+        <div class="nav-item">
+            <a href="{{ url_for('index') }}">🏠 ACCUEIL</a>
+        </div>
+
+        <!-- 🏛️ L'ARCOP -->
+        <div class="nav-item">
+            <a href="#">🏛️ L'ARCOP</a>
+            <div class="dropdown">
+                 <a href="{{ url_for('mot_president') }}">Le mot du président</a>
+                <a href="{{ url_for('histoire') }}">Notre Histoire</a>
+                <a href="{{ url_for('mission_vision_valeurs') }}">Mission, Vision et Valeurs</a>
+                <a href="{{ url_for('collaborateurs') }}">Nos collaborateurs </a>
+                <a href="{{ url_for('don') }}">Faire un don</a>
+                <a href="{{ url_for('emplois') }}">Offre d'emplois</a>
+            </div>
+        </div>
+
+        <!-- 🌿 Domaines -->
+        <div class="nav-item">
+            <a href="#">🌿 DOMAINES</a>
+            <div class="dropdown">
+                <a href="{{ url_for('domaines_education') }}">Éducation</a>
+                <a href="{{ url_for('domaines_humanitaire') }}">Humanitaire</a>
+                <a href="{{ url_for('domaines_sante') }}">Santé</a>
+                <a href="{{ url_for('domaines_changement_climatique') }}">Changement climatique</a>
+                <a href="{{ url_for('domaines_agroecologie') }}">Agroécologie</a>
+                <a href="{{ url_for('domaines_formation') }}">Formation professionnelle</a>
+
+            </div>
+        </div>
+
+        <!-- 🤝 Projets -->
+        <div class="nav-item">
+            <a href="#">🤝 PROJETS</a>
+            <div class="dropdown">
+                <a href="{{ url_for('projets_education') }}">Éducation</a>
+                <a href="{{ url_for('projets_humanitaire') }}">Humanitaire</a>
+                <a href="{{ url_for('projets_sante') }}">Santé</a>
+                <a href="{{ url_for('projets_changement_climatique') }}">Changement climatique</a>
+                <a href="{{ url_for('projets_agroecologie') }}">Agroécologie</a>
+                <a href="{{ url_for('projets_formation') }}">Formation professionnelle</a>
+
+            </div>
+        </div>
+
+        <!-- 🎥 Multimédias -->
+        <div class="nav-item">
+            <a href="#">🎥 MULTIMÉDIAS</a>
+            <div class="dropdown">
+                <a href="{{ url_for('galerie') }}">Galerie photos</a>
+                <a href="{{ url_for('videos') }}">Vidéothèque</a>
+                <a href="{{ url_for('documentations') }}">Documentations</a>
+
+            </div>
+        </div>
+
+        <!-- ✉️ Contact -->
+        <div class="nav-item">
+            <a href="{{ url_for('contact') }}">✉️ CONTACT</a>
+        </div>
+    </nav>
+</header>
+
+
+
+        {% block content %}{% endblock %}
+
+
+   
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>À propos de l'ARCOP</h4>
+                <p style="font-size: 13px; line-height: 1.8;">L'Association pour le Renforcement des Compétences des Organisations Paysannes œuvre pour le développement des capacités des producteurs agricoles au Burkina Faso.</p>
+                <div class="social-icons">
+                    <div class="social-icon">f</div>
+                    <div class="social-icon">in</div>
+                    <div class="social-icon">▶</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="{{ url_for('histoire') }}">Notre Histoire</a></li>
+                    <li><a href="{{ url_for('collaborateurs') }}">Nos collaborateurs</a></li>
+                    <li><a href="{{ url_for('domaines_agroecologie') }}">Agroécologie</a></li>
+                    <li><a href="{{ url_for('galerie') }}">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="{{ url_for('documentations') }}">Documentations</a></li>
+                    <li><a href="{{ url_for('videos') }}">Vidéothèque</a></li>
+                    <li><a href="{{ url_for('don') }}">Faire un don</a></li>
+                    <li><a href="{{ url_for('emplois') }}">Offres d'emplois</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p style="font-size: 13px; line-height: 1.8;">
+                    📍 Ouagadougou, Burkina Faso<br>
+                    📞 +226 XX XX XX XX<br>
+                    ✉️ contact@arcop.bf<br>
+                    🌐 www.arcop.bf
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>&copy; {{ current_year }} ARCOP - Association pour le Renforcement des Compétences des Organisations Paysannes. Tous droits réservés.</p>
+    </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  </body>
+    
+
+</html>

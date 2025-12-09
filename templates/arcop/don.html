@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Faire un don - ARCOP{% endblock %}
+
+{% block content %}
+<div class="page-header" style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h1 style="font-size: 42px; margin-bottom: 15px;">Faire un Don</h1>
+        <p style="font-size: 18px;">Soutenez nos actions pour le développement rural</p>
+    </div>
+</div>
+
+<section style="padding: 60px 20px;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #2d862d; margin-bottom: 20px;">Pourquoi faire un don ?</h2>
+            <p style="line-height: 1.8; color: #666;">
+                Votre soutien nous permet de continuer nos activités de renforcement des capacités des organisations paysannes, de formation et de promotion de l'agroécologie au Burkina Faso.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0;">
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 15px;">👨‍🌾</div>
+                <h4 style="color: #2d862d; margin-bottom: 10px;">Formation</h4>
+                <p style="color: #666; font-size: 14px;">Former les producteurs</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🌾</div>
+                <h4 style="color: #2d862d; margin-bottom: 10px;">Agroécologie</h4>
+                <p style="color: #666; font-size: 14px;">Promouvoir des pratiques durables</p>
+            </div>
+            <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🤝</div>
+                <h4 style="color: #2d862d; margin-bottom: 10px;">Accompagnement</h4>
+                <p style="color: #666; font-size: 14px;">Soutenir les organisations</p>
+            </div>
+        </div>
+
+        <div style="background: white; border: 2px solid #2d862d; border-radius: 10px; padding: 40px; margin-top: 40px;">
+            <h3 style="color: #2d862d; text-align: center; margin-bottom: 25px;">Informations bancaires</h3>
+            <p style="line-height: 1.8; color: #666; text-align: center; margin-bottom: 20px;">
+                Pour faire un don, vous pouvez effectuer un virement sur notre compte bancaire :<br><br>
+                <strong>Nom du compte :</strong> ARCOP<br>
+                <strong>Banque :</strong> [Nom de la banque]<br>
+                <strong>Numéro de compte :</strong> [Numéro de compte]<br>
+                <strong>IBAN :</strong> [IBAN]
+            </p>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="{{ url_for('contact') }}" class="btn-read-more" style="display: inline-block; padding: 15px 40px; text-decoration: none;">Nous contacter</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

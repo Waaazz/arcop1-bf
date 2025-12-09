@@ -1,0 +1,560 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="hero" id="accueil">
+         <div class="slideshow">
+            <img src="{{ url_for('static', filename='images/img3.jpg') }}" alt="Fond 1">
+            <img src="{{ url_for('static', filename='images/img4.jpg') }}" alt="Fond 2">
+            <img src="{{ url_for('static', filename='images/img1.jpg') }}" alt="Fond 3">
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Renforcer les Compétences des Organisations Paysannes</h2>
+                <p>L'ARCOP accompagne les organisations paysannes du Burkina Faso dans leur développement institutionnel et technique pour une agriculture durable et résiliente.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="window.location.hash='#presentation'">Découvrir l'ARCOP</button>
+                    <button class="btn-secondary" onclick="window.location.hash='#contact'">Nous Contacter</button>
+                </div>
+            </div>
+            <div class="document-preview">
+                <div class="document-inner">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="{{ url_for('static', filename='images/logo_arcop.png') }}" alt="Logo" style="height: 60px;">
+                    </div>
+                    <h3 style="color: #2d862d; text-align: center; margin-bottom: 15px; font-size: 16px;">Nos Publications</h3>
+                    <div style="background: white; padding: 15px; border-radius: 6px;">
+                        <div style="height: 6px; background: #e0e0e0; margin-bottom: 8px; border-radius: 3px;"></div>
+                        <div style="height: 6px; background: #e0e0e0; margin-bottom: 8px; border-radius: 3px; width: 90%;"></div>
+                        <div style="height: 6px; background: #e0e0e0; margin-bottom: 8px; border-radius: 3px; width: 95%;"></div>
+                        <div style="height: 6px; background: #e0e0e0; margin-bottom: 8px; border-radius: 3px; width: 85%;"></div>
+                        <div style="height: 6px; background: #e0e0e0; border-radius: 3px; width: 80%;"></div>
+                    </div>
+                    <button class="btn-read-more" style="width: 100%; margin-top: 15px;">Consulter</button>
+                </div>
+            </div>
+        </div>
+        <div class="extra-bg"></div>
+    </section>
+    
+
+
+    <section class="intro-section">
+        <div class="intro-container">
+            
+             <!-- Logo à droite -->
+            <div class="intro-logo">
+                <img src="{{ url_for('static', filename='images/logo_arcop.png') }}" alt="Logo ARCOP">
+            </div>
+            <!-- Texte à gauche -->
+            <div class="intro-content">
+                <h3>Bienvenue à l'ARCOP</h3>
+                <p>L'Association pour le Renforcement des Compétences des Organisations Paysannes (ARCOP) est une organisation dédiée au développement rural durable au Burkina Faso. Nous travaillons main dans la main avec les organisations paysannes pour renforcer leurs capacités techniques, organisationnelles et institutionnelles.</p>
+                <p>À travers nos programmes de formation, nos initiatives agroécologiques et notre plaidoyer pour des politiques agricoles favorables, nous contribuons à l'amélioration des conditions de vie des producteurs ruraux et à la sécurité alimentaire du pays.</p>
+            </div>
+
+           
+        </div>
+
+        <!-- Section statistiques -->
+        <div class="stats-section container">
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Organisations Membres</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Projets Actifs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10 000+</div>
+                <div class="stat-label">Producteurs Touchés</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Partenaires</div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <h2 class="section-title">Actualités</h2>
+
+
+        
+        
+        
+        <div class="news-grid">
+
+            <div class="news-card">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233197d1' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='22' fill='white' text-anchor='middle'%3EChangement climatique%3C/text%3E%3C/svg%3E" alt="News">
+    <div class="news-content">
+        <h3 class="news-title">Action climatique pour un avenir durable</h3>
+        <p class="news-excerpt">L'ARCOP met en œuvre des initiatives locales pour renforcer la résilience des communautés rurales face aux changements climatiques...</p>
+        <p class="news-date">📅 15 octobre 2025</p>
+        <button class="btn-read-more">Lire Plus</button>
+    </div>
+</div>
+
+<div class="news-card">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23ffcc00' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='black' text-anchor='middle'%3EEducation%3C/text%3E%3C/svg%3E" alt="News">
+    <div class="news-content">
+        <h3 class="news-title">Programme éducatif pour les jeunes ruraux</h3>
+        <p class="news-excerpt">L'ARCOP soutient la formation des jeunes en techniques agricoles et entreprenariat rural...</p>
+        <p class="news-date">📅 10 octobre 2025</p>
+        <button class="btn-read-more">Lire Plus</button>
+    </div>
+</div>
+
+<div class="news-card">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e53935' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='white' text-anchor='middle'%3ESanté%3C/text%3E%3C/svg%3E" alt="News">
+    <div class="news-content">
+        <h3 class="news-title">Campagne santé communautaire</h3>
+        <p class="news-excerpt">Sensibilisation sur la santé maternelle et infantile dans les zones rurales en partenariat avec les structures locales...</p>
+        <p class="news-date">📅 5 octobre 2025</p>
+        <button class="btn-read-more">Lire Plus</button>
+    </div>
+</div>
+
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%231e5a8e' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='white' text-anchor='middle'%3EFormation%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Renforcement des capacités des organisations membres</h3>
+                    <p class="news-excerpt">L'ARCOP a organisé une session de formation sur les techniques agroécologiques pour les membres...</p>
+                    <p class="news-date">📅 8 octobre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232d862d' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='20' fill='white' text-anchor='middle'%3EAgroécologie%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Promotion de l'agroécologie dans les zones rurales</h3>
+                    <p class="news-excerpt">Lancement d'un nouveau programme pour promouvoir les pratiques agroécologiques durables...</p>
+                    <p class="news-date">📅 2 octobre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23c41e3a' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='white' text-anchor='middle'%3EPartenariat%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Nouveau partenariat pour le développement rural</h3>
+                    <p class="news-excerpt">L'ARCOP signe un accord de partenariat stratégique avec des organisations internationales...</p>
+                    <p class="news-date">📅 25 septembre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%238bc34a' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='white' text-anchor='middle'%3EAtelier%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Atelier sur les politiques agro-sylvo-pastorales</h3>
+                    <p class="news-excerpt">Un atelier important sur l'analyse des politiques agricoles et leur impact sur les producteurs...</p>
+                    <p class="news-date">📅 18 septembre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23ff9800' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='20' fill='white' text-anchor='middle'%3ERenforcement%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Programme de renforcement institutionnel</h3>
+                    <p class="news-excerpt">Lancement d'un programme pour renforcer les capacités institutionnelles des OP membres...</p>
+                    <p class="news-date">📅 12 septembre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%234caf50' width='400' height='300'/%3E%3Ctext x='200' y='150' font-size='24' fill='white' text-anchor='middle'%3EDocumentation%3C/text%3E%3C/svg%3E" alt="News">
+                <div class="news-content">
+                    <h3 class="news-title">Nouvelle publication sur les bonnes pratiques agricoles</h3>
+                    <p class="news-excerpt">L'ARCOP publie un guide complet sur les pratiques agricoles durables au Burkina Faso...</p>
+                    <p class="news-date">📅 5 septembre 2025</p>
+                    <button class="btn-read-more">Lire Plus</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="btn-read-more" style="padding: 12px 40px; font-size: 14px;">Voir plus d'actualités ➜</button>
+        </div>
+    </div>
+
+    <section class="partenaires-section">
+        <div class="container">
+            <h2 class="section-title">Nos Partenaires</h2>
+            <div class="logos-slider">
+                <div class="logos-slide">
+                    <img src="{{ url_for('static', filename='images/partenaires/p1.jpg') }}" alt="Partenaire 1">
+                    <img src="{{ url_for('static', filename='images/partenaires/p2.jpg') }}" alt="Partenaire 2">
+                    <img src="{{ url_for('static', filename='images/partenaires/p3.jpg') }}" alt="Partenaire 3">
+                    <img src="{{ url_for('static', filename='images/partenaires/p4.jpg') }}" alt="Partenaire 4">
+                    <img src="{{ url_for('static', filename='images/partenaires/p5.jpg') }}" alt="Partenaire 5">
+                    <img src="{{ url_for('static', filename='images/partenaires/p6.jpg') }}" alt="Partenaire 6">
+                </div>
+
+                <div class="logos-slide">
+                    <img src="{{ url_for('static', filename='images/partenaires/p1.jpg') }}" alt="Partenaire 1">
+                    <img src="{{ url_for('static', filename='images/partenaires/p2.jpg') }}" alt="Partenaire 2">
+                    <img src="{{ url_for('static', filename='images/partenaires/p3.jpg') }}" alt="Partenaire 3">
+                    <img src="{{ url_for('static', filename='images/partenaires/p4.jpg') }}" alt="Partenaire 4">
+                    <img src="{{ url_for('static', filename='images/partenaires/p5.jpg') }}" alt="Partenaire 5">
+                    <img src="{{ url_for('static', filename='images/partenaires/p6.jpg') }}" alt="Partenaire 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h3>Restez informés des activités de l'ARCOP</h3>
+            <p style="color: #666; margin-bottom: 20px;">Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit" class="btn-subscribe">S'INSCRIRE</button>
+            </form>
+            <p style="color: #666; font-size: 12px;">En cliquant sur "S'inscrire", vous acceptez de recevoir nos newsletters</p>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #1e5a8e 0%, #0d3a5f 100%); padding: 80px 20px;">
+        <div class="container">
+            <h2 style="text-align: center; color: white; font-size: 36px; margin-bottom: 20px;">TRAVAILLER AVEC NOUS</h2>
+            <p style="text-align: center; color: white; font-size: 18px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Vous souhaitez contribuer au développement des organisations paysannes ? Rejoignez notre équipe ou collaborez avec nous sur nos projets.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 60px; margin-bottom: 20px;">👔</div>
+                    <h3 style="color: #2d862d; margin-bottom: 15px; font-size: 22px;">Recrutement</h3>
+                    <p style="color: #666; margin-bottom: 20px; font-size: 14px;">Consultez nos offres d'emploi et rejoignez une équipe engagée pour le développement rural</p>
+                    <button class="btn-read-more" style="padding: 10px 30px;">Voir les offres</button>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="font-size: 60px; margin-bottom: 20px;">📢</div>
+                    <h3 style="color: #2d862d; margin-bottom: 15px; font-size: 22px;">Appels d'offres</h3>
+                    <p style="color: #666; margin-bottom: 20px; font-size: 14px;">Découvrez nos appels d'offres en cours et soumettez vos propositions</p>
+                    <button class="btn-read-more" style="padding: 10px 30px;">Consulter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="agenda-section">
+        <div class="container">
+            <h2 style="text-align: center; color: white; font-size: 32px; margin-bottom: 40px;">Nos Domaines d'intervention</h2>
+            <div class="agenda-grid">
+                <div class="agenda-card">
+                    <div class="agenda-icon">🌡️</div>
+                    <h4>Changement Climatique</h4>
+                    <p style="font-size: 13px;">Adaptation et atténuation des effets du changement climatique sur les communautés rurales.</p>
+                </div>
+
+                <div class="agenda-card">
+                    <div class="agenda-icon">🎓</div>
+                    <h4>Éducation</h4>
+                    <p style="font-size: 13px;">Appui à la formation des jeunes et des producteurs pour le développement durable.</p>
+                </div>
+
+                <div class="agenda-card">
+                    <div class="agenda-icon">🏥</div>
+                    <h4>Santé</h4>
+                    <p style="font-size: 13px;">Initiatives pour la santé communautaire, notamment la santé maternelle et infantile.</p>
+                </div>
+
+                <div class="agenda-card">
+                    <div class="agenda-icon">🎓</div>
+                    <h4>Formation et Renforcement</h4>
+                    <p style="font-size: 13px;">Renforcement des capacités techniques et organisationnelles des OP</p>
+                </div>
+                <div class="agenda-card">
+                    <div class="agenda-icon">🌾</div>
+                    <h4>Agroécologie</h4>
+                    <p style="font-size: 13px;">Promotion des pratiques agroécologiques durables</p>
+                </div>
+                <div class="agenda-card">
+                    <div class="agenda-icon">📋</div>
+                    <h4>Plaidoyer</h4>
+                    <p style="font-size: 13px;">Analyse et influence des politiques agro-sylvo-pastorales</p>
+                </div>
+                <div class="agenda-card">
+                    <div class="agenda-icon">🤝</div>
+                    <h4>Partenariats</h4>
+                    <p style="font-size: 13px;">Développement de partenariats stratégiques</p>
+                </div>
+                <div class="agenda-card">
+                    <div class="agenda-icon">📚</div>
+                    <h4>Documentation</h4>
+                    <p style="font-size: 13px;">Capitalisation et diffusion des connaissances</p>
+                </div>
+                <div class="agenda-card">
+                    <div class="agenda-icon">🌍</div>
+                    <h4>Développement Rural</h4>
+                    <p style="font-size: 13px;">Appui au développement rural intégré</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn-read-more" style="background: white; color: #2d862d;">Découvrir nos actions ➜</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="agriculture-section1">
+        <h2 style="font-size: 36px; margin-bottom: 15px;">ORGANISATIONS PAYSANNES</h2>
+        <h3 style="font-size: 28px; margin-bottom: 20px;">Les membres de l'ARCOP</h3>
+        <button class="btn-read-more" style="padding: 15px 40px; font-size: 16px; margin-top: 20px;">DÉCOUVRIR</button>
+    </section>
+
+    <section style="background: #f5f5f5; padding: 60px 20px;">
+        <div class="container">
+            <h2 class="section-title">AGENDA</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+                <div style="background: white; border-left: 5px solid #2d862d; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #2d862d; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">25</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Oct</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #2d862d; margin-bottom: 8px; font-size: 16px;">Atelier sur la gestion durable des sols</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Formation des producteurs aux techniques de conservation des sols</p>
+                            <p style="font-size: 12px; color: #999;">📍 Ouagadougou</p>
+                        </div>
+                    </div>
+                </div>
+
+<!-- 🌍 Changement climatique -->
+            <div style="background: white; border-left: 5px solid #00bcd4; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;"
+                 onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                <div style="display: flex; gap: 20px;">
+                    <div style="text-align: center; min-width: 70px;">
+                        <div style="background: #00bcd4; color: white; padding: 10px; border-radius: 5px;">
+                            <div style="font-size: 24px; font-weight: bold;">10</div>
+                            <div style="font-size: 12px; text-transform: uppercase;">Jan</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="color: #00bcd4; margin-bottom: 8px; font-size: 16px;">Forum sur le changement climatique</h4>
+                        <p style="font-size: 13px; color: #666;">Discussion sur les impacts climatiques et solutions locales.</p>
+                        <p style="font-size: 12px; color: #999;">📍 Ouagadougou</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🎓 Éducation -->
+            <div style="background: white; border-left: 5px solid #673ab7; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;"
+                 onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                <div style="display: flex; gap: 20px;">
+                    <div style="text-align: center; min-width: 70px;">
+                        <div style="background: #673ab7; color: white; padding: 10px; border-radius: 5px;">
+                            <div style="font-size: 24px; font-weight: bold;">22</div>
+                            <div style="font-size: 12px; text-transform: uppercase;">Jan</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="color: #673ab7; margin-bottom: 8px; font-size: 16px;">Atelier sur l'éducation rurale</h4>
+                        <p style="font-size: 13px; color: #666;">Renforcement des compétences pédagogiques en milieu rural.</p>
+                        <p style="font-size: 12px; color: #999;">📍 Koudougou</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ❤️ Santé -->
+            <div style="background: white; border-left: 5px solid #e91e63; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;"
+                 onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                <div style="display: flex; gap: 20px;">
+                    <div style="text-align: center; min-width: 70px;">
+                        <div style="background: #e91e63; color: white; padding: 10px; border-radius: 5px;">
+                            <div style="font-size: 24px; font-weight: bold;">28</div>
+                            <div style="font-size: 12px; text-transform: uppercase;">Jan</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="color: #e91e63; margin-bottom: 8px; font-size: 16px;">Campagne santé communautaire</h4>
+                        <p style="font-size: 13px; color: #666;">Sensibilisation sur la nutrition et la santé maternelle.</p>
+                        <p style="font-size: 12px; color: #999;">📍 Ouahigouya</p>
+                    </div>
+                </div>
+            </div>
+
+                <div style="background: white; border-left: 5px solid #1e5a8e; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #1e5a8e; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">05</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Nov</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #1e5a8e; margin-bottom: 8px; font-size: 16px;">Réunion du conseil d'administration</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Session ordinaire du CA de l'ARCOP</p>
+                            <p style="font-size: 12px; color: #999;">📍 Siège de l'ARCOP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-left: 5px solid #c41e3a; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #c41e3a; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">18</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Nov</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #c41e3a; margin-bottom: 8px; font-size: 16px;">Salon de l'agriculture et de l'élevage</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Participation de l'ARCOP et exposition des produits membres</p>
+                            <p style="font-size: 12px; color: #999;">📍 Bobo-Dioulasso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-left: 5px solid #8bc34a; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #8bc34a; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">02</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Déc</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #8bc34a; margin-bottom: 8px; font-size: 16px;">Formation en agroforesterie</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Techniques d'intégration des arbres dans les systèmes agricoles</p>
+                            <p style="font-size: 12px; color: #999;">📍 Koudougou</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-left: 5px solid #ff9800; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #ff9800; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">15</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Déc</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #ff9800; margin-bottom: 8px; font-size: 16px;">Atelier bilan annuel 2024</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Évaluation des activités et planification 2025</p>
+                            <p style="font-size: 12px; color: #999;">📍 Ouagadougou</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-left: 5px solid #4caf50; padding: 20px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateX(10px)'" onmouseout="this.style.transform='translateX(0)'">
+                    <div style="display: flex; gap: 20px;">
+                        <div style="text-align: center; min-width: 70px;">
+                            <div style="background: #4caf50; color: white; padding: 10px; border-radius: 5px;">
+                                <div style="font-size: 24px; font-weight: bold;">20</div>
+                                <div style="font-size: 12px; text-transform: uppercase;">Déc</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h4 style="color: #4caf50; margin-bottom: 8px; font-size: 16px;">Journée portes ouvertes</h4>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Découverte des activités de l'ARCOP et visite du siège</p>
+                            <p style="font-size: 12px; color: #999;">📍 Siège de l'ARCOP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-read-more" style="padding: 12px 40px; font-size: 14px;">Voir tout l'agenda ➜</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="agriculture-section">
+        <h2>AGROÉCOLOGIE</h2>
+        <h3>Promouvoir des pratiques agricoles durables et résilientes</h3>
+        <p>
+            L'ARCOP accompagne les organisations paysannes dans la transition vers l'agroécologie
+            pour une agriculture respectueuse de l'environnement et des producteurs.
+        </p>
+        <button class="btn-read-more">EN SAVOIR PLUS</button>
+    </section>
+
+    <section class="climat-section">
+        <h2>CHANGEMENTS CLIMATIQUES</h2>
+        <h3>La gestion du phénomène au niveau des Producteurs et de leurs organisations</h3>
+        <button class="btn-read-more">EN SAVOIR PLUS</button>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #c41e3a;">L'ARCOP EN VIDÉO</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button"></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 style="color: #2d862d; margin-bottom: 8px;">Présentation de l'ARCOP</h4>
+                        <p style="font-size: 13px; color: #666;">Découvrez l'Association pour le Renforcement des Compétences des OP</p>
+                    </div>
+                </div>
+
+
+<!-- 🌍 Vidéo - Changement climatique -->
+            <div class="video-card">
+                <div class="video-thumbnail" style="background: #00bcd4;">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h4 style="color: #00bcd4; margin-bottom: 8px;">Changement climatique</h4>
+                    <p style="font-size: 13px; color: #666;">Nos actions locales pour l'adaptation et la résilience.</p>
+                </div>
+            </div>
+
+            <!-- 🎓 Vidéo - Éducation -->
+            <div class="video-card">
+                <div class="video-thumbnail" style="background: #673ab7;">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h4 style="color: #673ab7; margin-bottom: 8px;">Éducation</h4>
+                    <p style="font-size: 13px; color: #666;">Programmes de renforcement des compétences des jeunes.</p>
+                </div>
+            </div>
+
+            <!-- ❤️ Vidéo - Santé -->
+            <div class="video-card">
+                <div class="video-thumbnail" style="background: #e91e63;">
+                    <div class="play-button"></div>
+                </div>
+                <div class="video-info">
+                    <h4 style="color: #e91e63; margin-bottom: 8px;">Santé</h4>
+                    <p style="font-size: 13px; color: #666;">Initiatives pour la santé maternelle et infantile.</p>
+                </div>
+            </div>
+
+               <div class="video-card">
+                    <div class="video-thumbnail" style="background: #8bc34a;">
+                        <div class="play-button"></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 style="color: #2d862d; margin-bottom: 8px;">Nos réalisations</h4>
+                        <p style="font-size: 13px; color: #666;">Un aperçu de nos projets sur le terrain</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background: #4caf50;">
+                        <div class="play-button"></div>
+                    </div>
+                    <div class="video-info">
+                        <h4 style="color: #2d862d; margin-bottom: 8px;">Assemblée générale</h4>
+                        <p style="font-size: 13px; color: #666;">Moments forts de notre dernière AG</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn-read-more" style="background: #c41e3a; padding: 12px 40px;">Toutes les vidéos ➜</button>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

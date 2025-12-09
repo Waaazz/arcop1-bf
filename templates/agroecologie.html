@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}Agroécologie - ARCOP{% endblock %}
+
+{% block content %}
+<section style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), linear-gradient(135deg, #4caf50, #2d862d); padding: 100px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h1 style="font-size: 48px; margin-bottom: 20px;">🌱 AGROÉCOLOGIE</h1>
+        <p style="font-size: 22px; max-width: 800px; margin: 0 auto;">
+            Promouvoir des pratiques agricoles durables et résilientes pour un avenir meilleur
+        </p>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #2d862d; font-size: 32px; margin-bottom: 20px; text-align: center;">Qu'est-ce que l'agroécologie ?</h2>
+        <p style="font-size: 16px; line-height: 1.8; color: #666; margin-bottom: 20px; text-align: center;">
+            L'agroécologie est une approche intégrée qui applique simultanément des concepts et principes écologiques et sociaux à la conception et à la gestion des systèmes alimentaires et agricoles. Elle vise à optimiser les interactions entre les plantes, les animaux, les humains et l'environnement.
+        </p>
+    </div>
+</section>
+
+<section style="background: #f8f9fa; padding: 60px 20px;">
+    <div class="container">
+        <h2 style="color: #2d862d; font-size: 32px; margin-bottom: 40px; text-align: center;">Nos actions en agroécologie</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">🌾</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Agroforesterie</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Intégration des arbres dans les systèmes de production agricole pour améliorer la fertilité des sols et la biodiversité.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">💧</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Gestion de l'eau</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Techniques de conservation de l'eau et d'irrigation efficiente pour optimiser l'utilisation des ressources hydriques.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">🐄</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Agro-pastoralisme</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Intégration harmonieuse de l'agriculture et de l'élevage pour une meilleure valorisation des ressources.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">🌿</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Compostage</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Production et utilisation de compost organique pour enrichir les sols et réduire l'usage d'engrais chimiques.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">🌱</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Semences paysannes</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Conservation et multiplication de semences locales adaptées au contexte burkinabè.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-size: 60px; text-align: center; margin-bottom: 20px;">🔄</div>
+                <h3 style="color: #2d862d; font-size: 22px; margin-bottom: 15px; text-align: center;">Rotation des cultures</h3>
+                <p style="color: #666; line-height: 1.8; text-align: center;">Pratiques de rotation et d'association des cultures pour préserver la fertilité des sols.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #2d862d; font-size: 32px; margin-bottom: 30px; text-align: center;">Pourquoi l'agroécologie ?</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+            <div>
+                <h3 style="color: #1e5a8e; font-size: 20px; margin-bottom: 15px;">✅ Avantages environnementaux</h3>
+                <ul style="color: #666; line-height: 2; margin-left: 20px;">
+                    <li>Préservation de la biodiversité</li>
+                    <li>Amélioration de la santé des sols</li>
+                    <li>Réduction de l'érosion</li>
+                    <li>Séquestration du carbone</li>
+                    <li>Conservation de l'eau</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 style="color: #1e5a8e; font-size: 20px; margin-bottom: 15px;">✅ Avantages socio-économiques</h3>
+                <ul style="color: #666; line-height: 2; margin-left: 20px;">
+                    <li>Réduction des coûts de production</li>
+                    <li>Autonomie des producteurs</li>
+                    <li>Sécurité alimentaire renforcée</li>
+                    <li>Résilience aux changements climatiques</li>
+                    <li>Amélioration des revenus</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #8bc34a 0%, #4caf50 100%); padding: 60px 20px;">
+    <div class="container">
+        <h2 style="color: white; font-size: 32px; margin-bottom: 30px; text-align: center;">Formations et accompagnement</h2>
+        <p style="color: white; font-size: 18px; text-align: center; max-width: 800px; margin: 0 auto 40px;">
+            L'ARCOP propose des formations pratiques et un accompagnement technique pour les organisations paysannes souhaitant adopter des pratiques agroécologiques.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto;">
+            <div style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 10px; text-align: center;">
+                <h4 style="color: #2d862d; margin-bottom: 10px;">📚 Formations théoriques</h4>
+                <p style="font-size: 14px; color: #666;">Principes et concepts de l'agroécologie</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 10px; text-align: center;">
+                <h4 style="color: #2d862d; margin-bottom: 10px;">🛠️ Formations pratiques</h4>
+                <p style="font-size: 14px; color: #666;">Démonstrations sur le terrain</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 10px; text-align: center;">
+                <h4 style="color: #2d862d; margin-bottom: 10px;">🤝 Accompagnement</h4>
+                <p style="font-size: 14px; color: #666;">Suivi technique personnalisé</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 10px; text-align: center;">
+                <h4 style="color: #2d862d; margin-bottom: 10px;">📊 Capitalisation</h4>
+                <p style="font-size: 14px; color: #666;">Documentation des bonnes pratiques</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px; text-align: center;">
+    <div class="container">
+        <h2 style="color: #2d862d; font-size: 32px; margin-bottom: 20px;">Vous souhaitez en savoir plus ?</h2>
+        <p style="color: #666; font-size: 18px; margin-bottom: 30px;">Contactez-nous pour découvrir comment l'ARCOP peut accompagner votre organisation dans la transition agroécologique</p>
+        <button class="btn-primary" onclick="window.location='{{ url_for('contact') }}'" style="padding: 15px 40px; font-size: 16px;">Nous Contacter</button>
+    </div>
+</section>
+{% endblock %}

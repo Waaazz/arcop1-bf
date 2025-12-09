@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - ARCOP{% endblock %}
+
+{% block content %}
+<section class="hero" style="padding: 60px 20px;">
+    <div class="container">
+        <h1 style="color: white; font-size: 42px; text-align: center; margin-bottom: 20px;">Contactez-nous</h1>
+        <p style="color: white; font-size: 18px; text-align: center; max-width: 800px; margin: 0 auto;">
+            Nous sommes à votre écoute pour toute question ou demande d'information
+        </p>
+    </div>
+</section>
+
+<section style="background: white; padding: 60px 20px;">
+    <div class="container" style="max-width: 1000px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <!-- Formulaire de contact -->
+            <div>
+                <h2 style="color: #2d862d; font-size: 28px; margin-bottom: 20px;">Envoyez-nous un message</h2>
+                <form onsubmit="handleContactForm(event)" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Nom complet *</label>
+                        <input type="text" name="nom" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Email *</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Téléphone</label>
+                        <input type="tel" name="telephone" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Objet *</label>
+                        <input type="text" name="objet" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; color: #666; margin-bottom: 8px; font-weight: bold;">Message *</label>
+                        <textarea name="message" required rows="6" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: max-content; padding: 14px 40px;">Envoyer le message</button>
+                </form>
+            </div>
+            
+            <!-- Informations de contact -->
+            <div>
+                <h2 style="color: #2d862d; font-size: 28px; margin-bottom: 20px;">Nos coordonnées</h2>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1e5a8e; font-size: 18px; margin-bottom: 15px;">📍 Adresse</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Siège social de l'ARCOP<br>
+                        Ouagadougou<br>
+                        Burkina Faso
+                    </p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1e5a8e; font-size: 18px; margin-bottom: 15px;">📞 Téléphone</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        +226 XX XX XX XX<br>
+                        +226 XX XX XX XX
+                    </p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #1e5a8e; font-size: 18px; margin-bottom: 15px;">✉️ Email</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        contact@arcop.bf<br>
+                        info@arcop.bf
+                    </p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px;">
+                    <h3 style="color: #1e5a8e; font-size: 18px; margin-bottom: 15px;">🕒 Horaires</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Lundi - Vendredi : 8h00 - 17h00<br>
+                        Samedi : 8h00 - 12h00<br>
+                        Dimanche : Fermé
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Carte (vous pouvez intégrer Google Maps ici) -->
+<section style="background: #f5f5f5; padding: 60px 20px;">
+    <div class="container">
+        <h2 style="text-align: center; color: #2d862d; font-size: 32px; margin-bottom: 30px;">Notre localisation</h2>
+        <div style="background: #ddd; height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
+            <p>🗺️ Carte Google Maps à intégrer ici</p>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 32px; margin-bottom: 20px;">Suivez-nous sur les réseaux sociaux</h2>
+        <div class="social-icons" style="justify-content: center; font-size: 24px;">
+            <div class="social-icon" style="width: 50px; height: 50px;">f</div>
+            <div class="social-icon" style="width: 50px; height: 50px;">in</div>
+            <div class="social-icon" style="width: 50px; height: 50px;">▶</div>
+            <div class="social-icon" style="width: 50px; height: 50px;">📷</div>
+        </div>
+    </div>
+</section>
+{% endblock %}
