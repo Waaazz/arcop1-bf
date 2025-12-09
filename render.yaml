@@ -2,6 +2,7 @@ services:
   - type: web
     name: arcop-website
     env: python
+    pythonVersion: "3.12.10"   # <-- ajoute cette ligne
     buildCommand: pip install -r requirements.txt && flask db upgrade
     startCommand: gunicorn app:app
     envVars:
@@ -14,8 +15,3 @@ services:
           name: arcop-db
           property: connectionString
     autoDeploy: true
-
-databases:
-  - name: arcop-db
-    databaseName: arcop
-    user: arcop
