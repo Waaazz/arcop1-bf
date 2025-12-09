@@ -3,7 +3,7 @@ services:
     name: arcop-website
     env: python
     pythonVersion: 3.12
-    buildCommand: pip install -r requirements.txt && flask db upgrade
+    buildCommand: FLASK_APP=app.py pip install -r requirements.txt && flask db upgrade
     startCommand: gunicorn app:app
     envVars:
       - key: SECRET_KEY
