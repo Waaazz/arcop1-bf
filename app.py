@@ -6,6 +6,10 @@ from flask_admin.contrib.sqla import ModelView
 from datetime import datetime
 import os
 
+
+migrate = Migrate(app, db)
+
+
 # Initialisation de l'application Flask
 app = Flask(__name__)
 
