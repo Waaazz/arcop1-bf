@@ -20,7 +20,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Fix pour Render PostgreSQL
 if app.config['SQLALCHEMY_DATABASE_URI'].startswith("postgres://"):
-    app.config['SQLALCHEMY_DATABASE_URI'] = app.config['SQLALCHEMY_DATABASE_URI'].replace("postgres://", "postgresql://", 1)
+    # app.config['SQLALCHEMY_DATABASE_URI'] = app.config['SQLALCHEMY_DATABASE_URI'].replace("postgres://", "postgresql://", 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg://user:password@host/dbname'
 
 # Initialisation des extensions
 db = SQLAlchemy(app)

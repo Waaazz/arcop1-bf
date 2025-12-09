@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\azizn\Downloads\arcop_website_v2\arcop_website\venvarc1"
+VIRTUAL_ENV="C:\Users\azizn\Downloads\arcop_website_v2\arcop_website\venvarc2"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(venvarc1) ${PS1:-}"
+    PS1="(venvarc2) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(venvarc1) "
+    VIRTUAL_ENV_PROMPT="(venvarc2) "
     export VIRTUAL_ENV_PROMPT
 fi
 
