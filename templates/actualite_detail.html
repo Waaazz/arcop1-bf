@@ -12,11 +12,11 @@
 <section style="background: white; padding: 60px 20px;">
     <div class="container" style="max-width: 900px;">
         {% if actualite.image_url %}
-        <img src="{{ actualite.image_url }}" alt="{{ actualite.titre }}" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 12px; margin-bottom: 30px;">
+        <img src="{{ upload_url(actualite.image_url) }}" alt="{{ actualite.titre }}" style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 12px; margin-bottom: 30px;">
         {% endif %}
         
         <div style="font-size: 18px; line-height: 1.8; color: #666;">
-            {{ actualite.contenu|safe }}
+            {{ actualite.contenu|sanitize }}
         </div>
         
         <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #f0f0f0;">

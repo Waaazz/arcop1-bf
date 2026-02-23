@@ -2,21 +2,126 @@
 {% block title %}Formation Professionnelle - Domaines d'intervention - ARCOP{% endblock %}
 
 {% block content %}
-<div class="page-header" style="background: linear-gradient(135deg, #1e5a8e 0%, #0d3a5f 100%); padding: 60px 20px; text-align: center; color: white;">
+<div class="page-header" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url_for('static', filename='images/menbres.jpg') }}'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
     <div class="container">
-        <div style="font-size: 72px; margin-bottom: 20px;">📚</div>
+        <div style="font-size: 72px; margin-bottom: 20px;"></div>
         <h1 style="font-size: 42px; margin-bottom: 15px;">Formation Professionnelle</h1>
-        <p style="font-size: 18px;">Développement des compétences et capacités</p>
+        <p style="font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9;">Développer les compétences des producteurs et leaders paysans pour un développement rural durable</p>
     </div>
 </div>
 
-<section style="padding: 60px 20px;">
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #1e5a8e; text-align: center; font-size: 30px; margin-bottom: 25px;">La formation au cœur du changement</h2>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center; margin-bottom: 20px;">
+            L'ARCOP croit fermement que le renforcement des compétences est le levier le plus puissant pour transformer durablement les organisations paysannes. Nos programmes de formation professionnelle sont conçus avec et pour les producteurs, en tenant compte de leurs réalités, de leurs besoins et de leurs aspirations.
+        </p>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center;">
+            Combinant apprentissage pratique, échanges entre pairs et apports théoriques adaptés, nos formations permettent aux bénéficiaires d'acquérir des compétences directement applicables dans leurs activités quotidiennes.
+        </p>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #1e5a8e 0%, #0d3a5f 100%); padding: 60px 20px;">
     <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <p style="line-height: 1.8; color: #666; text-align: center; margin-bottom: 40px;">
-                L'ARCOP organise des formations professionnelles pour renforcer les compétences des producteurs et leaders paysans.
-            </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; text-align: center; color: white;">
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">2 500+</div>
+                <div style="font-size: 14px; opacity: 0.85;">Personnes formées</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">150+</div>
+                <div style="font-size: 14px; opacity: 0.85;">Sessions organisées</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">35</div>
+                <div style="font-size: 14px; opacity: 0.85;">Formateurs certifiés</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">12</div>
+                <div style="font-size: 14px; opacity: 0.85;">Modules disponibles</div>
+            </div>
         </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: #f8f9fa;">
+    <div class="container">
+        <h2 style="color: #1e5a8e; text-align: center; font-size: 30px; margin-bottom: 50px;">Nos modules de formation</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🏛️</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Gouvernance et leadership</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Formation des dirigeants d'organisations paysannes à la gouvernance démocratique, la gestion des conflits et la prise de décision collective.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">💰</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Gestion financière et comptabilité</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Initiation à la tenue des comptes, gestion des caisses collectives, lecture des bilans financiers et planification budgétaire.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">📈</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Gestion de projet</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Conception, mise en œuvre, suivi-évaluation et reporting de projets de développement rural selon les standards reconnus.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🛒</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Marketing et commercialisation</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Stratégies de mise en marché des produits agricoles, négociation avec les acheteurs et accès aux marchés rémunérateurs.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">✍️</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Alphabétisation fonctionnelle</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Programmes d'alphabétisation en français et en langues locales pour permettre aux producteurs de gérer eux-mêmes leur organisation.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #1e5a8e;">
+                <div style="font-size: 40px; margin-bottom: 15px;">📝</div>
+                <h3 style="color: #1e5a8e; margin-bottom: 12px; font-size: 18px;">Rédaction de projets et rapports</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Formation à la rédaction de propositions de financement, rapports d'activités et documents de communication pour les organisations membres.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #1e5a8e; text-align: center; font-size: 30px; margin-bottom: 40px;">Notre approche pédagogique</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; text-align: center;">
+            <div style="padding: 25px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🤝</div>
+                <h4 style="color: #1e5a8e; margin-bottom: 10px;">Apprentissage par les pairs</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Partage d'expériences entre producteurs pour une transmission horizontale des savoirs.</p>
+            </div>
+            <div style="padding: 25px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🔧</div>
+                <h4 style="color: #1e5a8e; margin-bottom: 10px;">Formation pratique sur le terrain</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Démonstrations directement dans les champs et les unités de production des participants.</p>
+            </div>
+            <div style="padding: 25px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">🌍</div>
+                <h4 style="color: #1e5a8e; margin-bottom: 10px;">Visites d'échange</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Voyages d'étude au Burkina Faso et dans la sous-région pour s'inspirer des expériences réussies.</p>
+            </div>
+            <div style="padding: 25px;">
+                <div style="font-size: 48px; margin-bottom: 15px;">📱</div>
+                <h4 style="color: #1e5a8e; margin-bottom: 10px;">Suivi post-formation</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Accompagnement des formés dans la mise en pratique de leurs acquis, via des visites de terrain régulières.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #0d3a5f 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 28px; margin-bottom: 15px;">Vous souhaitez bénéficier d'une formation ?</h2>
+        <p style="opacity: 0.9; margin-bottom: 30px; font-size: 16px;">Contactez-nous pour connaître le calendrier des prochaines sessions et les modalités d'inscription.</p>
+        <a href="{{ url_for('contact') }}" style="display: inline-block; background: white; color: #1e5a8e; padding: 14px 40px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">S'inscrire à une formation</a>
     </div>
 </section>
 {% endblock %}

@@ -16,7 +16,7 @@
                 <p style="color: #666; font-size: 14px; margin-bottom: 15px;">{{ doc.description }}</p>
                 <p style="color: #999; font-size: 12px;">Type: {{ doc.type_fichier }} • {{ doc.date_publication.strftime('%d/%m/%Y') }}</p>
                 {% if doc.fichier_url %}
-                <button class="btn-read-more" style="margin-top: 15px;">Télécharger</button>
+                <a href="{{ upload_url(doc.fichier_url) }}" class="btn-read-more" style="margin-top: 15px; display: inline-block; text-decoration: none;" target="_blank">Télécharger</a>
                 {% endif %}
             </div>
             {% endfor %}

@@ -2,20 +2,128 @@
 {% block title %}Humanitaire - Domaines d'intervention - ARCOP{% endblock %}
 
 {% block content %}
-<div class="page-header" style="background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 60px 20px; text-align: center; color: white;">
+<div class="page-header" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url_for('static', filename='images/img2.jpg') }}'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
     <div class="container">
-        <div style="font-size: 72px; margin-bottom: 20px;">❤️</div>
+        <div style="font-size: 72px; margin-bottom: 20px;"></div>
         <h1 style="font-size: 42px; margin-bottom: 15px;">Humanitaire</h1>
-        <p style="font-size: 18px;">Assistance et soutien aux communautés vulnérables</p>
+        <p style="font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9;">Assistance d'urgence et soutien durable aux communautés rurales vulnérables du Burkina Faso</p>
     </div>
 </div>
 
-<section style="padding: 60px 20px;">
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #ff6f00; text-align: center; font-size: 30px; margin-bottom: 25px;">Notre engagement humanitaire</h2>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center; margin-bottom: 20px;">
+            Face aux crises alimentaires, aux déplacements de populations et aux chocs climatiques qui affectent le Burkina Faso, l'ARCOP déploie des réponses humanitaires rapides et adaptées. Notre action repose sur la solidarité, la dignité humaine et le renforcement de la résilience des communautés.
+        </p>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center;">
+            Nous coordonnons nos interventions avec les organisations membres, les autorités locales et les partenaires internationaux pour maximiser l'impact et éviter les doublons.
+        </p>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%); padding: 60px 20px;">
     <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <p style="line-height: 1.8; color: #666; text-align: center; margin-bottom: 40px;">
-                L'ARCOP intervient dans le domaine humanitaire pour apporter un soutien aux communautés rurales vulnérables.
-            </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; text-align: center; color: white;">
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">15 000+</div>
+                <div style="font-size: 14px; opacity: 0.85;">Personnes assistées</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">12</div>
+                <div style="font-size: 14px; opacity: 0.85;">Provinces couvertes</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">8</div>
+                <div style="font-size: 14px; opacity: 0.85;">Partenaires actifs</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">3 ans</div>
+                <div style="font-size: 14px; opacity: 0.85;">D'expérience terrain</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: #f8f9fa;">
+    <div class="container">
+        <h2 style="color: #ff6f00; text-align: center; font-size: 30px; margin-bottom: 50px;">Nos axes d'intervention</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🍚</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Sécurité alimentaire d'urgence</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Distribution de vivres, kits alimentaires et semences aux ménages en situation d'insécurité alimentaire sévère pendant les périodes de soudure.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🏕️</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Appui aux personnes déplacées</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Assistance aux personnes déplacées internes (PDI) avec des kits non-alimentaires, abris d'urgence et accès à l'eau potable.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">👶</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Protection des enfants et femmes</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Prise en charge nutritionnelle des enfants malnutris, soutien psychosocial et protection des femmes et filles vulnérables.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">💧</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Eau, hygiène et assainissement</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Réhabilitation de points d'eau, sensibilisation aux bonnes pratiques d'hygiène et distribution de kits d'hygiène dans les zones de crise.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Relèvement précoce</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Appui à la reprise des activités agricoles post-crise avec des intrants subventionnés, semences et outils pour reconstruire les moyens de subsistance.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #ff6f00;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🤝</div>
+                <h3 style="color: #ff6f00; margin-bottom: 12px; font-size: 18px;">Cohésion sociale</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Activités de dialogue intercommunautaire pour renforcer la coexistence pacifique entre populations hôtes et déplacées en milieu rural.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 800px;">
+        <h2 style="color: #ff6f00; text-align: center; font-size: 30px; margin-bottom: 40px;">Notre approche</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background: #fff5e6; padding: 25px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🎯</div>
+                <h4 style="color: #ff6f00; margin-bottom: 10px;">Ciblage basé sur les besoins</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Évaluation rigoureuse des vulnérabilités pour atteindre les ménages les plus nécessiteux en priorité.</p>
+            </div>
+            <div style="background: #fff5e6; padding: 25px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 10px;">📊</div>
+                <h4 style="color: #ff6f00; margin-bottom: 10px;">Redevabilité et transparence</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Mécanismes de retour d'information des bénéficiaires et rapports réguliers aux donateurs et partenaires.</p>
+            </div>
+            <div style="background: #fff5e6; padding: 25px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🔗</div>
+                <h4 style="color: #ff6f00; margin-bottom: 10px;">Lien humanitaire-développement</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Transition progressive de l'aide d'urgence vers des actions de développement durable.</p>
+            </div>
+            <div style="background: #fff5e6; padding: 25px; border-radius: 10px; text-align: center;">
+                <div style="font-size: 36px; margin-bottom: 10px;">🌍</div>
+                <h4 style="color: #ff6f00; margin-bottom: 10px;">Coordination inter-agences</h4>
+                <p style="color: #666; font-size: 13px; line-height: 1.6;">Participation active aux clusters humanitaires pour une réponse cohérente et complémentaire.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #e65100 0%, #ff6f00 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 28px; margin-bottom: 15px;">Soutenir notre action humanitaire</h2>
+        <p style="opacity: 0.9; margin-bottom: 30px; font-size: 16px;">Votre don ou partenariat permet à l'ARCOP de répondre rapidement aux crises et de sauver des vies.</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ url_for('don') }}" style="display: inline-block; background: white; color: #ff6f00; padding: 14px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">Faire un don</a>
+            <a href="{{ url_for('contact') }}" style="display: inline-block; background: transparent; color: white; border: 2px solid white; padding: 14px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">Devenir partenaire</a>
         </div>
     </div>
 </section>

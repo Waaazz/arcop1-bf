@@ -1,14 +1,136 @@
 {% extends 'base.html' %}
-{% block title %}Initiatives - ARCOP{% endblock %}
+{% block title %}Nos Initiatives - ARCOP{% endblock %}
 {% block content %}
-<section class="hero" style="padding: 60px 20px;">
-    <div class="container">
-        <h1 style="color: white; font-size: 42px; text-align: center;">Nos Initiatives</h1>
+
+<section class="hero" style="padding: 80px 20px;">
+    <div class="container" style="text-align: center;">
+        <h1 style="color: white; font-size: 42px; margin-bottom: 15px;">Nos Initiatives</h1>
+        <p style="color: rgba(255,255,255,0.9); font-size: 18px; max-width: 700px; margin: 0 auto;">Des actions concrètes pour transformer durablement les communautés paysannes du Burkina Faso</p>
     </div>
 </section>
-<section style="background: white; padding: 60px 20px;">
+
+<section style="background: white; padding: 70px 20px;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #2d862d; text-align: center; font-size: 30px; margin-bottom: 25px;">L'ARCOP en action</h2>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center;">
+            Depuis sa création, l'ARCOP déploie des initiatives innovantes qui répondent aux défis réels des organisations paysannes. Chaque programme est co-conçu avec les bénéficiaires pour garantir son ancrage local et son impact durable.
+        </p>
+    </div>
+</section>
+
+<section style="background: #f8f9fa; padding: 70px 20px;">
     <div class="container">
-        <p style="text-align: center; font-size: 18px; color: #666;">Contenu à venir...</p>
+        <div style="display: flex; flex-direction: column; gap: 40px; max-width: 900px; margin: 0 auto;">
+
+            <!-- Initiative 1 -->
+            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr;">
+                <div style="background: linear-gradient(135deg, #2d862d, #1b5e20); width: 8px;"></div>
+                <div style="padding: 35px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 40px;">🌾</div>
+                        <div>
+                            <span style="background: #e8f5e9; color: #2d862d; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">AGROÉCOLOGIE</span>
+                            <h3 style="color: #2d862d; font-size: 20px; margin-top: 5px;">Programme Sahel Vert</h3>
+                        </div>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">Un programme d'envergure visant à convertir 5 000 hectares de terres dégradées en espaces productifs grâce aux techniques agroécologiques. Formation de 200 champions paysans locaux qui forment à leur tour leurs communautés.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <span style="color: #888; font-size: 13px;">📍 13 provinces</span>
+                        <span style="color: #888; font-size: 13px;">👨‍🌾 1 200 bénéficiaires</span>
+                        <span style="color: #888; font-size: 13px;">📅 2022 – 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Initiative 2 -->
+            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr;">
+                <div style="background: linear-gradient(135deg, #1e5a8e, #0d3a5f); width: 8px;"></div>
+                <div style="padding: 35px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 40px;">🎓</div>
+                        <div>
+                            <span style="background: #e3f2fd; color: #1e5a8e; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">FORMATION</span>
+                            <h3 style="color: #1e5a8e; font-size: 20px; margin-top: 5px;">École des Leaders Paysans</h3>
+                        </div>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">Un programme de leadership de 12 mois destiné aux jeunes dirigeants d'organisations paysannes. Gouvernance, gestion financière, plaidoyer, gestion de projet : toutes les compétences pour diriger efficacement.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <span style="color: #888; font-size: 13px;">📍 Ouagadougou + régions</span>
+                        <span style="color: #888; font-size: 13px;">👥 4 promotions</span>
+                        <span style="color: #888; font-size: 13px;">📅 En cours</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Initiative 3 -->
+            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr;">
+                <div style="background: linear-gradient(135deg, #00bcd4, #006064); width: 8px;"></div>
+                <div style="padding: 35px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 40px;">🌡️</div>
+                        <div>
+                            <span style="background: #e0f7fa; color: #0097a7; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">CLIMAT</span>
+                            <h3 style="color: #0097a7; font-size: 20px; margin-top: 5px;">Résilience Climatique Sahel</h3>
+                        </div>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">En partenariat avec des ONG internationales, ce programme accompagne 30 organisations paysannes dans l'élaboration et la mise en œuvre de plans locaux d'adaptation au changement climatique, incluant la gestion de l'eau et la restauration des terres.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <span style="color: #888; font-size: 13px;">📍 Nord, Est, Sahel</span>
+                        <span style="color: #888; font-size: 13px;">🏘️ 30 villages</span>
+                        <span style="color: #888; font-size: 13px;">📅 2023 – 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Initiative 4 -->
+            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr;">
+                <div style="background: linear-gradient(135deg, #e91e63, #c2185b); width: 8px;"></div>
+                <div style="padding: 35px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 40px;">👩‍🌾</div>
+                        <div>
+                            <span style="background: #fce4ec; color: #c2185b; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">GENRE</span>
+                            <h3 style="color: #c2185b; font-size: 20px; margin-top: 5px;">Femmes Rurales Entrepreneures</h3>
+                        </div>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">Programme d'autonomisation économique des femmes rurales, combinant formation en entrepreneuriat, accès aux financements (warrantage, mutuelles), et développement de filières féminines (maraîchage, karité, sésame).</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <span style="color: #888; font-size: 13px;">📍 8 provinces</span>
+                        <span style="color: #888; font-size: 13px;">👩 600 femmes</span>
+                        <span style="color: #888; font-size: 13px;">📅 2021 – En cours</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Initiative 5 -->
+            <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr;">
+                <div style="background: linear-gradient(135deg, #ff6f00, #e65100); width: 8px;"></div>
+                <div style="padding: 35px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="font-size: 40px;">🏪</div>
+                        <div>
+                            <span style="background: #fff3e0; color: #e65100; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">MARCHÉ</span>
+                            <h3 style="color: #e65100; font-size: 20px; margin-top: 5px;">Marchés Paysans Équitables</h3>
+                        </div>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 15px;">Création de marchés paysans hebdomadaires dans 5 villes du Burkina Faso, permettant aux producteurs de vendre directement leurs produits agroécologiques aux consommateurs urbains, sans intermédiaires, à prix équitable.</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <span style="color: #888; font-size: 13px;">📍 5 villes</span>
+                        <span style="color: #888; font-size: 13px;">🛒 200 producteurs</span>
+                        <span style="color: #888; font-size: 13px;">📅 Chaque samedi</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 28px; margin-bottom: 15px;">Vous avez une idée d'initiative ?</h2>
+        <p style="opacity: 0.9; margin-bottom: 30px; font-size: 16px;">L'ARCOP est ouverte aux partenariats pour co-construire de nouvelles initiatives au service des organisations paysannes.</p>
+        <a href="{{ url_for('contact') }}" style="display: inline-block; background: white; color: #2d862d; padding: 14px 40px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">Proposer un partenariat</a>
     </div>
 </section>
 {% endblock %}

@@ -16,7 +16,7 @@
             {% for membre in collaborateurs %}
             <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 15px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 {% if membre.photo_url %}
-                <img src="{{ membre.photo_url }}" alt="{{ membre.nom }}" style="width: 100%; height: 250px; object-fit: cover;">
+                <img src="{{ upload_url(membre.photo_url) }}" alt="{{ membre.nom }}" style="width: 100%; height: 250px; object-fit: cover;">
                 {% else %}
                 <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 60px; font-weight: bold;">
                     {{ membre.nom[0] }}

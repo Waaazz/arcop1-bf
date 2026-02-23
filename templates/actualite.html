@@ -8,11 +8,11 @@
 </section>
 <section style="background: white; padding: 60px 20px;">
     <div class="container">
-        {% if actualites %}
+        {% if actualites.items %}
         <div class="news-grid">
-            {% for actu in actualites %}
+            {% for actu in actualites.items %}
             <div class="news-card">
-                <img src="{{ actu.image_url or 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Crect fill=%27%231e5a8e%27 width=%27400%27 height=%27300%27/%3E%3C/svg%3E' }}" alt="{{ actu.titre }}">
+                <img src="{{ upload_url(actu.image_url) or 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 300%27%3E%3Crect fill=%27%231e5a8e%27 width=%27400%27 height=%27300%27/%3E%3C/svg%3E' }}" alt="{{ actu.titre }}">
                 <div class="news-content">
                     <h3 class="news-title">{{ actu.titre }}</h3>
                     <p class="news-excerpt">{{ actu.extrait or actu.contenu[:200] }}</p>
@@ -22,6 +22,25 @@
             </div>
             {% endfor %}
         </div>
+
+        {% if actualites.pages > 1 %}
+        <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 50px; flex-wrap: wrap;">
+            {% if actualites.has_prev %}
+            <a href="{{ url_for('actualite', page=actualites.prev_num) }}" style="padding: 10px 18px; background: white; border: 2px solid #2d862d; color: #2d862d; border-radius: 6px; text-decoration: none; font-weight: 600;">← Précédent</a>
+            {% endif %}
+            {% for p in actualites.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                {% if p %}
+                <a href="{{ url_for('actualite', page=p) }}" style="padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; {% if p == actualites.page %}background: #2d862d; color: white;{% else %}background: white; color: #333; border: 2px solid #ddd;{% endif %}">{{ p }}</a>
+                {% else %}
+                <span style="padding: 10px 8px; color: #999;">…</span>
+                {% endif %}
+            {% endfor %}
+            {% if actualites.has_next %}
+            <a href="{{ url_for('actualite', page=actualites.next_num) }}" style="padding: 10px 18px; background: white; border: 2px solid #2d862d; color: #2d862d; border-radius: 6px; text-decoration: none; font-weight: 600;">Suivant →</a>
+            {% endif %}
+        </div>
+        {% endif %}
+
         {% else %}
         <p style="text-align: center; color: #666; padding: 60px;">Aucune actualité disponible pour le moment.</p>
         {% endif %}

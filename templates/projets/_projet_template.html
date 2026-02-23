@@ -5,7 +5,7 @@
             {% for projet in projets %}
             <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 {% if projet.image_url %}
-                <img src="{{ projet.image_url }}" alt="{{ projet.titre }}" style="width: 100%; height: 200px; object-fit: cover;">
+                <img src="{{ upload_url(projet.image_url) }}" alt="{{ projet.titre }}" style="width: 100%; height: 200px; object-fit: cover;">
                 {% else %}
                 <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; padding: 20px; text-align: center;">
                     {{ projet.titre }}

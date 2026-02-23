@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Erreur serveur - ARCOP{% endblock %}
+{% block content %}
+<section style="min-height: 70vh; display: flex; align-items: center; justify-content: center; background: #f8f9fa; padding: 60px 20px;">
+    <div style="text-align: center; max-width: 600px;">
+        <div style="font-size: 100px; margin-bottom: 20px; line-height: 1;">⚠️</div>
+        <h1 style="font-size: 80px; color: #e65100; font-weight: 800; margin-bottom: 0; line-height: 1;">500</h1>
+        <h2 style="color: #333; font-size: 26px; margin: 15px 0 20px;">Erreur interne du serveur</h2>
+        <p style="color: #666; font-size: 16px; line-height: 1.7; margin-bottom: 35px;">
+            Une erreur inattendue s'est produite. Notre équipe technique a été notifiée. Veuillez réessayer dans quelques instants ou revenez à l'accueil.
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ url_for('index') }}" style="display: inline-block; background: #2d862d; color: white; padding: 14px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">🏠 Retour à l'accueil</a>
+            <a href="javascript:location.reload()" style="display: inline-block; background: white; color: #e65100; border: 2px solid #e65100; padding: 14px 35px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">🔄 Réessayer</a>
+        </div>
+        <p style="color: #aaa; font-size: 13px; margin-top: 40px;">
+            Si le problème persiste, contactez-nous à <a href="mailto:contact@arcop.bf" style="color: #1e5a8e;">contact@arcop.bf</a>
+        </p>
+    </div>
+</section>
+{% endblock %}

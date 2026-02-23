@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin - ARCOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0f172a;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg at 50% 50%, #2d862d20, #1e5a8e20, #2d862d10, #1e5a8e20);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .bg-orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #2d862d;
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-orb-2 {
+            width: 300px;
+            height: 300px;
+            background: #1e5a8e;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            max-width: 420px;
+            width: 100%;
+            padding: 48px 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .login-header .logo-wrapper {
+            width: 80px;
+            height: 80px;
+            background: rgba(45, 134, 45, 0.15);
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid rgba(45, 134, 45, 0.3);
+        }
+
+        .login-header .logo-wrapper img {
+            height: 55px;
+        }
+
+        .login-header h1 {
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .login-header p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper .icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            opacity: 0.5;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px 14px 42px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-size: 14px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2d862d;
+            background: rgba(45, 134, 45, 0.08);
+            box-shadow: 0 0 0 3px rgba(45, 134, 45, 0.15);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2d862d, #1e5a8e);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 134, 45, 0.3);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .alert {
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .alert-error {
+            background: rgba(196, 30, 58, 0.15);
+            color: #ff6b6b;
+            border: 1px solid rgba(196, 30, 58, 0.3);
+        }
+
+        .alert-success {
+            background: rgba(45, 134, 45, 0.15);
+            color: #6bcb77;
+            border: 1px solid rgba(45, 134, 45, 0.3);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .back-link a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .back-link a:hover {
+            color: #6bcb77;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 20px;
+                padding: 36px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-wrapper">
+                <img src="{{ url_for('static', filename='images/logo_arcop.png') }}" alt="Logo ARCOP">
+            </div>
+            <h1>Administration ARCOP</h1>
+            <p>Connectez-vous pour acceder au tableau de bord</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('admin_login') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="form-group">
+                <label>Nom d'utilisateur</label>
+                <div class="input-wrapper">
+                    <span class="icon">&#x1f464;</span>
+                    <input type="text" name="username" required autofocus placeholder="Entrez votre identifiant">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Mot de passe</label>
+                <div class="input-wrapper">
+                    <span class="icon">&#x1f512;</span>
+                    <input type="password" name="password" required placeholder="Entrez votre mot de passe">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">
+                Se connecter
+            </button>
+        </form>
+
+        <div class="back-link">
+            <a href="{{ url_for('index') }}">&#8592; Retour au site public</a>
+        </div>
+    </div>
+</body>
+</html>

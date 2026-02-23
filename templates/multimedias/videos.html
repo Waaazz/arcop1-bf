@@ -4,21 +4,77 @@
 {% block content %}
 <div class="page-header" style="background: linear-gradient(135deg, #c41e3a 0%, #8b1528 100%); padding: 60px 20px; text-align: center; color: white;">
     <div class="container">
-        <div style="font-size: 72px; margin-bottom: 20px;">🎥</div>
         <h1 style="font-size: 42px; margin-bottom: 15px;">Vidéothèque</h1>
         <p style="font-size: 18px;">L'ARCOP en vidéo</p>
     </div>
 </div>
 
-<section style="padding: 60px 20px;">
+<section style="padding: 60px 20px; background: #f5f5f5;">
     <div class="container">
-        <div style="text-align: center; padding: 60px 20px;">
-            <div style="font-size: 72px; margin-bottom: 20px;">▶️</div>
-            <h3 style="color: #c41e3a; margin-bottom: 15px;">Vidéothèque en construction</h3>
-            <p style="color: #666; font-size: 16px;">
-                Notre vidéothèque sera bientôt disponible. Revenez prochainement pour visionner nos vidéos.
-            </p>
+        {% if videos.items %}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 25px;">
+            {% for video in videos.items %}
+            <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <!-- Miniature ou embed -->
+                {% if 'youtube.com' in video.url_video or 'youtu.be' in video.url_video %}
+                    {% set video_id = video.url_video.split('v=')[-1].split('&')[0] if 'v=' in video.url_video else video.url_video.split('/')[-1].split('?')[0] %}
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe src="https://www.youtube.com/embed/{{ video_id }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+                    </div>
+                {% elif video.miniature_url %}
+                    <a href="{{ video.url_video }}" target="_blank" style="display: block; position: relative;">
+                        <img src="{{ upload_url(video.miniature_url) }}" alt="{{ video.titre }}" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+                            <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid #c41e3a; margin-left: 4px;"></div>
+                            </div>
+                        </div>
+                    </a>
+                {% else %}
+                    <a href="{{ video.url_video }}" target="_blank" style="display: block; background: linear-gradient(135deg, #c41e3a, #8b1528); height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <div style="width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 20px solid #c41e3a; margin-left: 4px;"></div>
+                        </div>
+                    </a>
+                {% endif %}
+
+                <div style="padding: 20px;">
+                    <h4 style="color: #c41e3a; margin-bottom: 8px; font-size: 17px;">{{ video.titre }}</h4>
+                    {% if video.description %}
+                    <p style="color: #666; font-size: 13px; line-height: 1.5; margin-bottom: 12px;">{{ video.description|truncate(120) }}</p>
+                    {% endif %}
+                    {% if video.categorie %}
+                    <span style="display: inline-block; padding: 4px 12px; background: #fef2f2; color: #c41e3a; border-radius: 15px; font-size: 11px;">{{ video.categorie|capitalize }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
         </div>
+        {% if videos.pages > 1 %}
+        <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 50px; flex-wrap: wrap;">
+            {% if videos.has_prev %}
+            <a href="{{ url_for('videos', page=videos.prev_num) }}" style="padding: 10px 18px; background: white; border: 2px solid #c41e3a; color: #c41e3a; border-radius: 6px; text-decoration: none; font-weight: 600;">← Précédent</a>
+            {% endif %}
+            {% for p in videos.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                {% if p %}
+                <a href="{{ url_for('videos', page=p) }}" style="padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; {% if p == videos.page %}background: #c41e3a; color: white;{% else %}background: white; color: #333; border: 2px solid #ddd;{% endif %}">{{ p }}</a>
+                {% else %}
+                <span style="padding: 10px 8px; color: #999;">…</span>
+                {% endif %}
+            {% endfor %}
+            {% if videos.has_next %}
+            <a href="{{ url_for('videos', page=videos.next_num) }}" style="padding: 10px 18px; background: white; border: 2px solid #c41e3a; color: #c41e3a; border-radius: 6px; text-decoration: none; font-weight: 600;">Suivant →</a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div style="text-align: center; padding: 80px 20px;">
+            <div style="font-size: 80px; margin-bottom: 20px;">&#x1f3ac;</div>
+            <h3 style="color: #666; font-size: 24px; margin-bottom: 15px;">Aucune vidéo pour le moment</h3>
+            <p style="color: #999; font-size: 16px;">Revenez prochainement pour visionner nos vidéos.</p>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %}

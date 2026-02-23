@@ -20,7 +20,7 @@
                 <div style="background: #f8f9fa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
                     <div style="background: linear-gradient(135deg, #2d862d, #1e5a8e); height: 150px; display: flex; align-items: center; justify-content: center;">
                         {% if membre.photo_url %}
-                            <img src="{{ membre.photo_url }}" alt="{{ membre.nom }}" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; object-fit: cover;">
+                            <img src="{{ upload_url(membre.photo_url) }}" alt="{{ membre.nom }}" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; object-fit: cover;">
                         {% else %}
                             <div style="width: 120px; height: 120px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; color: #2d862d;">
                                 {{ membre.nom[0] }}

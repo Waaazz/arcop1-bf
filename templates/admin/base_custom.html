@@ -1,0 +1,530 @@
+{% extends 'admin/base.html' %}
+
+{% block head_css %}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    /* ==========================================
+       ARCOP Admin - Modern Dark Theme
+       ========================================== */
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background: #f0f2f5 !important;
+    }
+
+    /* ---- NAVBAR ---- */
+    .navbar {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+        border: none !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        padding: 0 20px !important;
+        min-height: 60px !important;
+    }
+
+    .navbar-header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: white !important;
+        letter-spacing: -0.3px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 !important;
+        height: 60px !important;
+        line-height: 60px !important;
+    }
+
+    .navbar-brand:hover {
+        color: #6bcb77 !important;
+    }
+
+    .navbar-nav > li > a {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        padding: 18px 16px !important;
+        transition: all 0.2s ease !important;
+        border-bottom: 2px solid transparent;
+    }
+
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li.active > a {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-bottom: 2px solid #2d862d;
+    }
+
+    .navbar-nav .dropdown-menu {
+        background: #1e293b !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+        padding: 8px !important;
+        margin-top: 0 !important;
+    }
+
+    .navbar-nav .dropdown-menu > li > a {
+        color: rgba(255, 255, 255, 0.7) !important;
+        border-radius: 8px !important;
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        transition: all 0.2s !important;
+    }
+
+    .navbar-nav .dropdown-menu > li > a:hover {
+        background: rgba(45, 134, 45, 0.15) !important;
+        color: #6bcb77 !important;
+    }
+
+    .navbar-nav .dropdown-header {
+        color: rgba(255, 255, 255, 0.4) !important;
+        font-size: 11px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 16px 6px !important;
+    }
+
+    /* ---- CONTENT AREA ---- */
+    .container-fluid {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* ---- PAGE HEADER ---- */
+    .page-header {
+        background: linear-gradient(135deg, #2d862d 0%, #1e5a8e 100%);
+        color: white;
+        padding: 28px 32px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 20px rgba(45, 134, 45, 0.2);
+    }
+
+    .page-header h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    /* ---- STAT CARDS ---- */
+    .stat-card {
+        background: white;
+        padding: 28px 24px;
+        border-radius: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        text-align: center;
+        margin-bottom: 20px;
+        border: 1px solid #e8ecf1;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-card h3 {
+        color: #0f172a;
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 4px;
+        letter-spacing: -1px;
+    }
+
+    .stat-card p {
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    /* ---- BUTTONS ---- */
+    .btn-primary, .btn-success {
+        background: linear-gradient(135deg, #2d862d, #1f6b1f) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        padding: 10px 20px !important;
+        font-weight: 600 !important;
+        font-size: 13px !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 8px rgba(45, 134, 45, 0.2) !important;
+    }
+
+    .btn-primary:hover, .btn-success:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 15px rgba(45, 134, 45, 0.35) !important;
+    }
+
+    .btn-danger {
+        background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        font-size: 13px !important;
+    }
+
+    .btn-default, .btn-secondary {
+        background: white !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 10px !important;
+        font-weight: 500 !important;
+        font-size: 13px !important;
+    }
+
+    .btn-outline-primary {
+        border: 2px solid #2d862d !important;
+        color: #2d862d !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+        transition: all 0.3s !important;
+    }
+
+    .btn-outline-primary:hover {
+        background: #2d862d !important;
+        color: white !important;
+    }
+
+    .btn-outline-danger {
+        border: 2px solid #dc2626 !important;
+        color: #dc2626 !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+    }
+
+    .btn-outline-danger:hover {
+        background: #dc2626 !important;
+        color: white !important;
+    }
+
+    /* ---- TABLES ---- */
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .table thead th {
+        background: #0f172a !important;
+        color: white !important;
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        padding: 14px 16px !important;
+        border: none !important;
+    }
+
+    .table tbody tr {
+        transition: background 0.2s;
+    }
+
+    .table tbody tr:hover {
+        background: #f0fdf4 !important;
+    }
+
+    .table tbody td {
+        padding: 14px 16px !important;
+        font-size: 13px !important;
+        color: #374151 !important;
+        vertical-align: middle !important;
+        border-color: #f1f5f9 !important;
+    }
+
+    /* ---- CARDS ---- */
+    .card {
+        border: 1px solid #e8ecf1 !important;
+        border-radius: 16px !important;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+        transition: all 0.3s !important;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .card-header {
+        background: #fafbfc !important;
+        border-bottom: 1px solid #e8ecf1 !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        color: #0f172a !important;
+        padding: 16px 20px !important;
+    }
+
+    .card-body {
+        padding: 20px !important;
+    }
+
+    /* ---- FORMS ---- */
+    .form-control {
+        border-radius: 10px !important;
+        border: 1px solid #d1d5db !important;
+        padding: 10px 14px !important;
+        font-size: 14px !important;
+        transition: all 0.2s !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    .form-control:focus {
+        border-color: #2d862d !important;
+        box-shadow: 0 0 0 3px rgba(45, 134, 45, 0.12) !important;
+    }
+
+    /* ---- ALERTS ---- */
+    .alert {
+        border-radius: 12px !important;
+        border: none !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        padding: 14px 20px !important;
+    }
+
+    .alert-success {
+        background: #dcfce7 !important;
+        color: #166534 !important;
+    }
+
+    .alert-error, .alert-danger {
+        background: #fef2f2 !important;
+        color: #991b1b !important;
+    }
+
+    .alert-info {
+        background: #dbeafe !important;
+        color: #1e40af !important;
+    }
+
+    /* ---- PAGINATION ---- */
+    .pagination > li > a,
+    .pagination > li > span {
+        border-radius: 8px !important;
+        margin: 0 3px !important;
+        font-size: 13px !important;
+        color: #374151 !important;
+        border: 1px solid #d1d5db !important;
+    }
+
+    .pagination > .active > a {
+        background: #2d862d !important;
+        border-color: #2d862d !important;
+        color: white !important;
+    }
+
+    /* ---- FOOTER ---- */
+    .admin-footer {
+        background: #fafbfc;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+        border-top: 1px solid #e8ecf1;
+    }
+
+    .admin-footer p {
+        margin: 0;
+        color: #94a3b8;
+        font-size: 13px;
+    }
+
+    /* ---- Quick Action Cards ---- */
+    .quick-card {
+        background: white;
+        border: 1px solid #e8ecf1;
+        border-radius: 16px;
+        padding: 28px 20px;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+    }
+
+    .quick-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        border-color: #2d862d;
+    }
+
+    .quick-card .icon-circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .quick-card h5 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 6px;
+    }
+
+    .quick-card p {
+        font-size: 12px;
+        color: #94a3b8;
+        margin-bottom: 14px;
+    }
+
+    /* ---- Activity Feed ---- */
+    .activity-item {
+        display: flex;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid #f1f5f9;
+        align-items: flex-start;
+    }
+
+    .activity-item:last-child {
+        border-bottom: none;
+    }
+
+    .activity-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-top: 6px;
+        flex-shrink: 0;
+    }
+
+    .activity-info h6 {
+        font-size: 13px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 3px;
+    }
+
+    .activity-info p {
+        font-size: 12px;
+        color: #94a3b8;
+        margin: 0;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+        .navbar-brand {
+            font-size: 16px !important;
+        }
+
+        .page-header {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 20px;
+        }
+    }
+
+    /* ---- Scrollbar ---- */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+    }
+
+    /* ---- Boolean icons ---- */
+    .fa-check-circle, .glyphicon-ok-circle {
+        color: #22c55e !important;
+    }
+
+    .fa-minus-circle, .glyphicon-minus-sign {
+        color: #ef4444 !important;
+    }
+
+    /* ---- Filters ---- */
+    .filters .filter-row {
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+</style>
+{% endblock %}
+
+{% block brand %}
+<a class="navbar-brand" href="{{ admin_view.admin.url }}">
+    <span style="background: linear-gradient(135deg, #2d862d, #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ARCOP</span>
+    <span style="color: rgba(255,255,255,0.4); font-weight: 300; font-size: 14px;">Admin</span>
+</a>
+{% endblock %}
+
+{% block main_menu %}
+{{ super() }}
+<div class="navbar-nav ml-auto" style="display: flex; align-items: center; gap: 8px;">
+    <a class="nav-link" href="{{ url_for('index') }}" target="_blank" style="color: rgba(255,255,255,0.6) !important; font-size: 12px !important; padding: 8px 14px !important; background: rgba(255,255,255,0.06); border-radius: 8px; margin-right: 8px;">
+        Voir le site
+    </a>
+    {% if admin_logged_in %}
+    <a class="nav-link" href="{{ url_for('admin_logout') }}" style="color: #f87171 !important; font-size: 12px !important; padding: 8px 14px !important; background: rgba(248, 113, 113, 0.08); border-radius: 8px;">
+        Deconnexion
+    </a>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block messages %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="container-fluid" style="padding: 20px 30px 0;">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert" style="animation: slideDown 0.3s ease;">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+{% endblock %}
+
+{% block tail %}
+{{ super() }}
+<div class="admin-footer">
+    <p>&copy; {{ current_year }} ARCOP - Tableau de bord administrateur</p>
+</div>
+<style>
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+{% endblock %}

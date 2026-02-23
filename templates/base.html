@@ -96,6 +96,33 @@
 
 
 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div style="position: fixed; top: 80px; right: 20px; z-index: 9999; max-width: 380px;">
+                {% for category, message in messages %}
+                <div style="
+                    padding: 14px 18px;
+                    margin-bottom: 10px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    {% if category == 'success' %}background: #d4edda; color: #155724; border-left: 4px solid #28a745;
+                    {% elif category == 'error' %}background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545;
+                    {% elif category == 'info' %}background: #d1ecf1; color: #0c5460; border-left: 4px solid #17a2b8;
+                    {% else %}background: #fff3cd; color: #856404; border-left: 4px solid #ffc107;{% endif %}
+                " onclick="this.remove()">
+                    {% if category == 'success' %}✅{% elif category == 'error' %}❌{% elif category == 'info' %}ℹ️{% else %}⚠️{% endif %}
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+
         {% block content %}{% endblock %}
 
 

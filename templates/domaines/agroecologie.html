@@ -2,21 +2,116 @@
 {% block title %}Agroécologie - Domaines d'intervention - ARCOP{% endblock %}
 
 {% block content %}
-<div class="page-header" style="background: linear-gradient(135deg, #2d862d 0%, #1b5e20 100%); padding: 60px 20px; text-align: center; color: white;">
+<div class="page-header" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url_for('static', filename='images/arciologie.jpg') }}'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white;">
     <div class="container">
-        <div style="font-size: 72px; margin-bottom: 20px;">🌾</div>
+        <div style="font-size: 72px; margin-bottom: 20px;"></div>
         <h1 style="font-size: 42px; margin-bottom: 15px;">Agroécologie</h1>
-        <p style="font-size: 18px;">Pratiques agricoles durables et respectueuses</p>
+        <p style="font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9;">Pratiques agricoles durables, respectueuses de l'environnement et des communautés rurales</p>
     </div>
 </div>
 
-<section style="padding: 60px 20px;">
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 900px;">
+        <h2 style="color: #2d862d; text-align: center; font-size: 30px; margin-bottom: 25px;">Notre vision agroécologique</h2>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center; margin-bottom: 20px;">
+            L'ARCOP promeut l'agroécologie comme pilier fondamental du développement agricole durable au Burkina Faso. Nous accompagnons les producteurs dans la transition vers des pratiques qui combinent performance économique, justice sociale et préservation des ressources naturelles.
+        </p>
+        <p style="line-height: 1.9; color: #555; font-size: 16px; text-align: center;">
+            Notre approche valorise les savoirs locaux tout en intégrant les innovations scientifiques adaptées au contexte sahélien, afin de construire une agriculture résiliente face aux défis climatiques et alimentaires.
+        </p>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #2d862d 0%, #1b5e20 100%); padding: 60px 20px;">
     <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <p style="line-height: 1.8; color: #666; text-align: center; margin-bottom: 40px;">
-                L'ARCOP promeut l'agroécologie comme approche de production agricole durable, respectueuse de l'environnement et des producteurs.
-            </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; text-align: center; color: white;">
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">1 200+</div>
+                <div style="font-size: 14px; opacity: 0.85;">Producteurs formés</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">45</div>
+                <div style="font-size: 14px; opacity: 0.85;">Villages touchés</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">3 500 ha</div>
+                <div style="font-size: 14px; opacity: 0.85;">En pratiques durables</div>
+            </div>
+            <div>
+                <div style="font-size: 42px; font-weight: 700; margin-bottom: 8px;">30%</div>
+                <div style="font-size: 14px; opacity: 0.85;">Hausse des rendements</div>
+            </div>
         </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: #f8f9fa;">
+    <div class="container">
+        <h2 style="color: #2d862d; text-align: center; font-size: 30px; margin-bottom: 50px;">Nos domaines d'action</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🌱</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Compostage et fertilisation organique</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Formation à la production de compost, bio-pesticides et engrais organiques pour réduire la dépendance aux intrants chimiques coûteux.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">💧</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Conservation des eaux et des sols</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Mise en place de cordons pierreux, demi-lunes et zaï pour récupérer les terres dégradées et retenir l'eau de pluie.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🌳</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Agroforesterie</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Intégration des arbres dans les systèmes agricoles pour améliorer la fertilité des sols, la biodiversité et les revenus des ménages.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🐄</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Agriculture-élevage intégrée</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Promotion des synergies entre culture et élevage pour optimiser l'utilisation des ressources et diversifier les revenus.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🌻</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Semences paysannes</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Préservation et échange de semences locales adaptées, constitution de banques de semences communautaires pour la souveraineté alimentaire.</p>
+            </div>
+
+            <div style="background: white; padding: 35px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.07); border-top: 4px solid #2d862d;">
+                <div style="font-size: 40px; margin-bottom: 15px;">🏪</div>
+                <h3 style="color: #2d862d; margin-bottom: 12px; font-size: 18px;">Marchés paysans</h3>
+                <p style="color: #666; line-height: 1.7; font-size: 14px;">Organisation de circuits courts et marchés paysans pour valoriser les produits agroécologiques locaux à prix équitable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 70px 20px; background: white;">
+    <div class="container" style="max-width: 800px;">
+        <h2 style="color: #2d862d; text-align: center; font-size: 30px; margin-bottom: 50px;">Témoignage</h2>
+        <div style="background: #f0f7f0; padding: 40px; border-radius: 16px; border-left: 5px solid #2d862d;">
+            <p style="color: #444; line-height: 1.9; font-size: 16px; font-style: italic; margin-bottom: 20px;">
+                "Depuis que j'applique les techniques de zaï et de compostage enseignées par l'ARCOP, mes rendements de mil ont augmenté de 40%. Je n'achète plus d'engrais chimiques et mes revenus ont presque doublé."
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background: #2d862d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">👨‍🌾</div>
+                <div>
+                    <div style="font-weight: 700; color: #333;">Moussa KABORÉ</div>
+                    <div style="color: #888; font-size: 13px;">Producteur, Province du Sanmatenga</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #1b5e20 0%, #2d862d 100%); padding: 60px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h2 style="font-size: 28px; margin-bottom: 15px;">Rejoignez le mouvement agroécologique</h2>
+        <p style="opacity: 0.9; margin-bottom: 30px; font-size: 16px;">Partenaires, producteurs, organisations — ensemble pour une agriculture durable au Burkina Faso.</p>
+        <a href="{{ url_for('contact') }}" style="display: inline-block; background: white; color: #2d862d; padding: 14px 40px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 15px;">Nous contacter</a>
     </div>
 </section>
 {% endblock %}
