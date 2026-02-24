@@ -57,9 +57,10 @@ Thumbs.db
 # Migrations (keep migrations/ folder but ignore its content initially)
 migrations/versions/*.pyc
 
-# Uploads (si vous gérez des uploads de fichiers)
+# Uploads - ignorer les fichiers uploadés mais garder la structure des dossiers
 uploads/
-static/uploads/
+static/uploads/**/*
+!static/uploads/**/.gitkeep
 
 # Test coverage
 .coverage

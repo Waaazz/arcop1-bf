@@ -281,12 +281,19 @@ class Abonne(db.Model):
 
 class SecureModelView(ModelView):
     """Vue de modèle sécurisée avec authentification"""
-    
+
     def is_accessible(self):
         return session.get('admin_logged_in')
-    
+
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('admin_login'))
+
+    def handle_view_exception(self, exc):
+        """Journalise toutes les exceptions admin et affiche un message d'erreur convivial."""
+        import traceback
+        app.logger.error('Erreur admin (%s): %s\n%s', self.__class__.__name__, exc, traceback.format_exc())
+        flash(f'Erreur lors de l\'opération : {exc}', 'error')
+        return True
 
 
 class SecureAdminIndexView(AdminIndexView):
@@ -1202,6 +1209,8 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     """Page 500"""
+    import traceback
+    app.logger.error('Erreur 500: %s\n%s', e, traceback.format_exc())
     return render_template('500.html'), 500
 
 
